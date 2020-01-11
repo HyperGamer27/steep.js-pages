@@ -11,9 +11,213 @@
   <!-- This line removes any default padding and style.
        You might only need one of these values set. -->
   <style> body { padding: 0; margin: 0; }
+          #rs
+          {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 100px;
+            height: 50px;
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            color: lightgreen;
+            font-style: normal;
+            font-size: 20px;
+          }
+                    /* The slider itself */
+          .slider {
+            -webkit-appearance: none;  /* Override default CSS styles */
+            appearance: none;
+            width: 10%; /* Full-width */
+            height: 10px; /* Specified height */
+            background: #111111; /* Grey background */
+            outline: none; /* Remove outline */
+            opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+            -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+            transition: opacity .2s;
+          }
+
+          /* Mouse-over effects */
+          .slider:hover {
+            opacity: 1; /* Fully shown on mouse-over */
+          }
+
+          /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+          .slider::-webkit-slider-thumb {
+            -webkit-appearance: none; /* Override default look */
+            appearance: none;
+            width: 10px; /* Set a specific slider handle width */
+            height: 10px; /* Slider handle height */
+            background: #891d29; /* red background */
+            cursor: pointer; /* Cursor on hover */
+          }
+
+          .slider::-moz-range-thumb {
+            width: 20px; /* Set a specific slider handle width */
+            height: 20px; /* Slider handle height */
+            background: #891d29; /* red background */
+            cursor: pointer; /* Cursor on hover */
+          }
+          #Range
+          {
+            position: absolute;
+            top: 100px;
+            right: 5px;
+          }
+          #thick
+          {
+            position: absolute;
+            top: 100px;
+            right:175px;
+          }
+          #pr
+          {
+            position: absolute;
+            top: 60px;
+            right: 50px;
+            color: white;
+          }
+          #thicktext
+          {
+            position: absolute;
+            top: 60px;
+            right: 213px;
+            color: white;
+          }
+          #help
+          {
+            position: absolute;
+            top: 5px;
+            right: 125px;
+            width: 100px;
+            height: 50px;
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            color: #ff6600;
+            font-style: normal;
+            font-size: 20px;
+          }
+          #cl
+          {
+            position: absolute;
+            top: 5px;
+            right: 250px;
+            width: 100px;
+            height: 50px;
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            color: #B5E0F1;
+            font-style: normal;
+            font-size: 20px;
+          }
+          #ch1
+          {
+            position: absolute;
+            top: 150px;
+            right: 5px;
+            color: white;
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            cursor:pointer;
+            overflow: hidden;
+            border-color: #111111;
+          }
+          #ch2
+          {
+            position: absolute;
+            top: 200px;
+            right: 5px;
+            color: white;
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            cursor:pointer;
+            overflow: hidden;
+            border-color: #111111;
+          }
+          #ch3
+          {
+            position: absolute;
+            top: 250px;
+            right: 5px;
+            color: white;
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            cursor:pointer;
+            overflow: hidden;
+            border-color: #111111;
+          }
+          #ch4
+          {
+            position: absolute;
+            top: 300px;
+            right: 5px;
+            color: white;
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            cursor:pointer;
+            overflow: hidden;
+            border-color: #111111;
+          }
+          #ch1txt
+          {
+            position: absolute;
+            top: 150px;
+            right: 205px;
+            color: #E6E600;
+          }
+          #ch2txt
+          {
+            position: absolute;
+            top: 200px;
+            right: 205px;
+            color: #39FF14;
+          }
+          #ch3txt
+          {
+            position: absolute;
+            top: 250px;
+            right: 205px;
+            color: #800080;
+          }
+          #ch4txt
+          {
+            position: absolute;
+            top: 300px;
+            right: 205px;
+            color: #427DF0;
+          }
   </style>
+
 </head>
 
 <body style="background-color:#000000;">
+  <p id = "pr">Samples</p>
+  <p id = "thicktext">Thickness</p>
+  <button type="button" id="rs">RUN</button>
+  <button type="button" id="help">HELP</button>
+  <button type="button" id="cl">CLEAR</button>
+  <div class="slidecontainer">
+    <input type="range" min="1" max="50" value="25" class="slider" id="Range">
+  </div>
+  <div class="slidecontainer">
+    <input type="range" min="1" max="3" value="2" class="slider" id="thick">
+  </div>
+<input type="text" id = "ch1">
+<input type="text" id = "ch2">
+<input type="text" id = "ch3">
+<input type="text" id = "ch4">
+<b id = "ch1txt">Channel 1</b>
+<b id = "ch2txt">Channel 2</b>
+<b id = "ch3txt">Channel 3</b>
+<b id = "ch4txt">Channel 4</b>
 </body>
 </html>
