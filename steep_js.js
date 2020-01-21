@@ -76,7 +76,6 @@ function setup() {
     document.getElementById("defaultCanvas0").addEventListener("click", function()
     {
       console.log("pressed");
-      document.getElementById('coords').innerHTML = "X:" + (mouseX - dimX / 2) + " Y:" + -(mouseY - dimY/2);
       stroke(200);
       point(floor(mouseX), floor(mouseY));
     })
@@ -155,4 +154,5 @@ function draw() {
      ch3();
      ch4();
    }
+   document.getElementById('coords').innerHTML = "X: " + floor(mouseX - dimX / 2) + " Y: " + -floor(mouseY - dimY/2);
 }
