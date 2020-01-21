@@ -8,6 +8,8 @@ alert("Welcome to steep.js");
 const dimX = prompt("Enter the width of the plot in pixels");
 const dimY = prompt("Enter the height of the plot in pixels");
 
+let left_button_pressed = 0;
+
 let thickness = 2;
 let isRunning = 0;
 let step;
@@ -71,6 +73,13 @@ function setup() {
       line(dimX / 2, 0, dimX / 2, dimY);
       isRunning = 0;
     })
+    document.getElementById("defaultCanvas0").addEventListener("click", function()
+    {
+      console.log("pressed");
+      document.getElementById('coords').innerHTML = "X:" + (mouseX - dimX / 2) + " Y:" + -(mouseY - dimY/2);
+      stroke(200);
+      point(floor(mouseX), floor(mouseY));
+    })
 }
 
 function ch1()
@@ -80,7 +89,7 @@ function ch1()
       strokeWeight(thickness);
       console.log('draw');
       stroke(230, 230, 0);
-      point(x + dimX / 2, -f(x) + dimY / 2);
+      point(round(x + dimX / 2), round(-f(x) + dimY / 2));
       x += step;
     }
     else {
@@ -95,7 +104,7 @@ function ch2()
       strokeWeight(thickness);
       console.log('draw');
       stroke(57, 255, 20);
-      point(x + dimX / 2, -g(x) + dimY / 2);
+      point(round(x + dimX / 2), round(-g(x) + dimY / 2));
       x += step;
     }
     else {
@@ -110,7 +119,7 @@ function ch3()
       strokeWeight(thickness);
       console.log('draw');
       stroke(128, 0, 128);
-      point(x + dimX / 2, -h(x) + dimY / 2);
+      point(round(x + dimX / 2), round(-h(x) + dimY / 2));
       x += step;
     }
     else {
@@ -125,7 +134,7 @@ function ch4()
       strokeWeight(thickness);
       console.log('draw');
       stroke(66, 125, 240);
-      point(x + dimX / 2, -w(x) + dimY / 2);
+      point(round(x + dimX / 2), round(-w(x) + dimY / 2));
       x += step;
     }
     else {
@@ -134,6 +143,11 @@ function ch4()
 }
 
 function draw() {
+  stroke(255);
+  if (mouseIsPressed === true) {
+    strokeWeight(2);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+  }
   if(isRunning)
   {
      ch1();
