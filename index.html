@@ -3,13 +3,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>steep.js</title>
-  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
   <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
   <script language="javascript" type="text/javascript" src="steep_js.js"></script>
-  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
-
-  <!-- This line removes any default padding and style.
-       You might only need one of these values set. -->
   <style> body { padding: 0; margin: 0; }
           #rs
           {
@@ -27,39 +22,38 @@
             font-style: normal;
             font-size: 20px;
           }
-                    /* The slider itself */
           .slider {
-            -webkit-appearance: none;  /* Override default CSS styles */
+            -webkit-appearance: none;  
             appearance: none;
-            width: 10%; /* Full-width */
-            height: 10px; /* Specified height */
-            background: #111111; /* Grey background */
-            outline: none; /* Remove outline */
-            opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-            -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+            width: 10%; 
+            height: 10px; 
+            background: #111111; 
+            outline: none; 
+            opacity: 0.7; 
+            -webkit-transition: .2s; 
             transition: opacity .2s;
           }
 
-          /* Mouse-over effects */
+         
           .slider:hover {
-            opacity: 1; /* Fully shown on mouse-over */
+            opacity: 1;
           }
 
-          /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+          
           .slider::-webkit-slider-thumb {
-            -webkit-appearance: none; /* Override default look */
+            -webkit-appearance: none; 
             appearance: none;
-            width: 10px; /* Set a specific slider handle width */
-            height: 10px; /* Slider handle height */
-            background: #891d29; /* red background */
-            cursor: pointer; /* Cursor on hover */
+            width: 10px; 
+            height: 10px; 
+            background: #891d29; 
+            cursor: pointer; 
           }
 
           .slider::-moz-range-thumb {
-            width: 20px; /* Set a specific slider handle width */
-            height: 20px; /* Slider handle height */
-            background: #891d29; /* red background */
-            cursor: pointer; /* Cursor on hover */
+            width: 20px; 
+            height: 20px; 
+            background: #891d29; 
+            cursor: pointer; 
           }
           #Range
           {
